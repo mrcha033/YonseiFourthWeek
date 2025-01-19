@@ -1,0 +1,28 @@
+/* 배경 이미지 스타일 */
+body {
+    background-image: url('../images/kuromi_1.png');  /* 경로 수정 */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(5px);
+}
+
+/* 로고 이미지 스타일 */
+.logo {
+    width: 120px;
+    height: auto;
+    margin: 0 auto 20px;
+    display: block;
+}
+
+/* 아이콘 스타일 */
+.icon {
+    width: 48px;
+    height: 48px;
+    vertical-align: middle;
+    margin-right: 8px;
+} 

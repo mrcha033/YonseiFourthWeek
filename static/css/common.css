@@ -1,0 +1,237 @@
+/* 전역 색상 변수 */
+:root {
+    --primary-pink: #FF69B4;
+    --light-pink: #FFB6C1;
+    --dark-pink: #FF1493;
+    --bg-pink: #FFF0F5;
+}
+
+/* 네비게이션 바 스타일 */
+.navbar {
+    background-color: var(--bg-pink);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    color: var(--dark-pink);
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.nav-link {
+    color: var(--dark-pink);
+    font-weight: 500;
+}
+
+.navbar .btn-outline-danger {
+    color: var(--dark-pink);
+    border-color: var(--dark-pink);
+    font-weight: 500;
+    padding: 0.5rem 1.5rem;
+}
+
+.navbar .btn-outline-danger:hover {
+    background-color: var(--dark-pink);
+    color: white;
+}
+
+/* 환영 섹션 스타일 */
+.welcome-section {
+    background-color: #f7c4ec;
+    padding: 60px 0;
+}
+
+.welcome-container {
+    position: relative;
+    z-index: 1;
+}
+
+.welcome-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-out;
+}
+
+.welcome-image {
+    width: 180px;
+    height: auto;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.welcome-image:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.welcome-text {
+    text-align: left;
+    flex: 1;
+}
+
+.welcome-section .display-4 {
+    font-weight: 800;
+    color: var(--dark-pink);
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-message {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.username {
+    color: var(--dark-pink);
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+/* 카드 스타일 */
+.feature-card {
+    background-color: white;
+    padding: 2rem;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.feature-card h3 {
+    color: var(--dark-pink);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+/* 버튼 스타일 */
+.btn-primary {
+    background-color: var(--primary-pink);
+    border-color: var(--primary-pink);
+    padding: 0.8rem 2rem;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--dark-pink);
+    border-color: var(--dark-pink);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* 푸터 스타일 */
+footer {
+    background-color: var(--bg-pink);
+    color: var(--dark-pink);
+    padding: 40px 0;
+    margin-top: 60px;
+}
+
+footer h5 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+footer p {
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+/* 리스트 스타일 */
+.feature-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 2rem;
+}
+
+.feature-list li {
+    margin: 1rem 0;
+    color: var(--dark-pink);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.feature-list li:before {
+    content: "♥";
+    margin-right: 10px;
+    color: var(--primary-pink);
+}
+
+/* 배경 스타일 */
+body {
+    background-color: #f7c4ec;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(5px);
+}
+
+/* 애니메이션 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .welcome-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .welcome-text {
+        text-align: center;
+    }
+
+    .welcome-image {
+        width: 150px;
+    }
+
+    .welcome-section .display-4 {
+        font-size: 2rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+}
+
+/* 로고 이미지 스타일 */
+.logo {
+    width: 120px;
+    height: auto;
+    margin: 0 auto 20px;
+    display: block;
+}
+
+/* 아이콘 스타일 */
+.icon {
+    vertical-align: middle;
+    margin-right: 8px;
+} 

@@ -1,0 +1,54 @@
+/* 공통 스타일 */
+body {
+    background-color: #f8f9fa;
+}
+
+/* 폼 스타일링 */
+form {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+/* 에러 메시지 스타일링 */
+.errorlist {
+    color: #dc3545;
+    list-style: none;
+    padding: 0;
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+/* 버튼 호버 효과 */
+.btn-login:hover {
+    background-color: #0056b3;
+}
+
+.btn-signup:hover {
+    background-color: #218838;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 576px) {
+    .login-container,
+    .signup-container {
+        margin: 20px;
+    }
+}

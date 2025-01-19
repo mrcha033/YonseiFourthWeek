@@ -1,0 +1,337 @@
+.container {
+    max-width: 1200px;
+    padding: 2rem;
+    margin: 2rem auto;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #fff5f6;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: var(--dark-pink);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 1rem 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#todoForm {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+#todoInput {
+    flex: 2;
+    padding: 0.8rem 1rem;
+    border: 2px solid var(--light-pink);
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+#todoInput:focus {
+    outline: none;
+    border-color: var(--primary-pink);
+}
+
+button {
+    padding: 12px 24px;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff4d79;
+    transform: translateY(-2px);
+}
+
+#todoList {
+    list-style: none;
+    padding: 0;
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(255, 182, 193, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid #ffe4e9;
+}
+
+.todo-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 182, 193, 0.25);
+}
+
+.todo-item span {
+    flex: 1;
+    margin-right: 15px;
+    color: #ff4d79;
+}
+
+.delete-btn {
+    background-color: #ff99ac;
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+.delete-btn:hover {
+    background-color: #ff7088;
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin: 15px;
+        padding: 20px;
+    }
+
+    #todoForm {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+.input-group {
+    display: flex;
+    gap: 1rem;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+#dueDateInput {
+    flex: 1;
+    padding: 0.8rem 1rem;
+    border: 2px solid var(--light-pink);
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+#dueDateInput:focus {
+    outline: none;
+    border-color: var(--primary-pink);
+}
+
+.input-group button {
+    background-color: var(--primary-pink);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.input-group button:hover {
+    background-color: var(--dark-pink);
+}
+
+.todo-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.todo-list {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.todo-list h2 {
+    color: var(--dark-pink);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.calendar {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.calendar h2 {
+    color: var(--dark-pink);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #ffd1dc;
+}
+
+.todo-content {
+    flex: 1;
+}
+
+.todo-date {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 4px;
+}
+
+.overdue {
+    color: #ff4d4d;
+}
+
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    padding: 10px;
+}
+
+.calendar-header {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.calendar-day {
+    text-align: center;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #fff5f6;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.calendar-day:hover {
+    background-color: #ffd1dc;
+}
+
+.calendar-day.has-todo {
+    background-color: #ff69b4;
+    color: white;
+}
+
+.calendar-day.today {
+    border: 2px solid #ff4d79;
+}
+
+.calendar-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.calendar-nav-btn {
+    background-color: var(--primary-pink);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.calendar-nav-btn:hover {
+    background-color: var(--dark-pink);
+}
+
+#currentMonth {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--dark-pink);
+}
+
+.day-header {
+    font-weight: bold;
+    color: #ff4d79;
+    background-color: transparent !important;
+    border-bottom: 2px solid #ffd1dc;
+    cursor: default !important;
+}
+
+.day-header:hover {
+    background-color: transparent !important;
+    transform: none !important;
+}
+
+button[type="submit"] {
+    white-space: nowrap;
+    min-width: fit-content;
+    height: 45px;
+    padding: 0 24px;
+    line-height: 45px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .todo-container {
+        grid-template-columns: 1fr;
+    }
+
+    .input-group {
+        flex-direction: column;
+    }
+
+    #todoInput, #dueDateInput {
+        width: 100%;
+    }
+
+    .input-group button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.todo-list, .calendar {
+    animation: slideIn 0.5s ease-out;
+}
