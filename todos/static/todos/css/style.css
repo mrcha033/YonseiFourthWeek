@@ -125,6 +125,13 @@ button:hover {
     align-items: center;
 }
 
+.input-group .icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
 #dueDateInput {
     flex: 1;
     padding: 0.8rem 1rem;
@@ -150,6 +157,12 @@ button:hover {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+}
+
+.input-group button .icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
 }
 
 .input-group button:hover {
